@@ -2,19 +2,20 @@ from django.db import models
 
 
 class Autor(models.Model):
-
     class Meta:
-        verbose_name_plural="Autores"
+        verbose_name_plural = "Autores"
 
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
     profesion = models.CharField(max_length=100)
 
+    def __str__(self):
+        
+
 
 class Articulo(models.Model):
-
     class Meta:
-        verbose_name_plural="Articulos"
+        verbose_name_plural = "Articulos"
 
     titulo = models.CharField(max_length=100)
     texto = models.CharField(max_length=1000)
@@ -22,8 +23,7 @@ class Articulo(models.Model):
 
 
 class Seccion(models.Model):
-
     class Meta:
-        verbose_name_plural="Secciones"
+        verbose_name_plural = "Secciones"
 
     nombre = models.CharField(max_length=100)
