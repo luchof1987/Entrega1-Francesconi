@@ -10,7 +10,7 @@ class Autor(models.Model):
     profesion = models.CharField(max_length=100)
 
     def __str__(self):
-        
+        return self.nombre
 
 
 class Articulo(models.Model):
